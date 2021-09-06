@@ -1,0 +1,3 @@
+rootProject.name = "Anguard"
+include ':sample'
+include ':anguard'
