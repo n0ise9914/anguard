@@ -20,5 +20,6 @@ AndroidJavaClass anguardClass = new AndroidJavaClass("com.anguard.Anguard");
 anguardClass.CallStatic("initialize", context);
 string token = anguardClass.CallStatic<string>("getToken", "");
 ```
+sample project [anguard-unity3d.rar](misc/anguard-unity3d.rar)
 ### Server
 Use this [Method](sample/src/main/java/com/example/MainActivity.java#L39) to decrypt the token at your java backend.
