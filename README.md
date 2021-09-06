@@ -4,14 +4,14 @@
 </br>
 <p align="center"><img src="misc/1.png"></a></p>
 
-### Building
+Building
+-------------------
 Replace the [AES key](anguard/jni/Anguard.cpp#L14) with yours
 ```gradle
 gradlew anguard:assembleRelease
 ```
-</br>
-
-### Unity3D
+Unity3D
+-------------------
 ```C#
 AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -20,3 +20,5 @@ AndroidJavaClass anguardClass = new AndroidJavaClass("com.anguard.Anguard");
 anguardClass.CallStatic("initialize", context);
 string token = anguardClass.CallStatic<string>("getToken", "");
 ```
+### Server
+Use this [Method](sample/src/main/java/com/example/MainActivity.java#L39) to decrypt the token at your java backend.
